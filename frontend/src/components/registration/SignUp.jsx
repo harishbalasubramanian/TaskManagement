@@ -3,6 +3,8 @@ import '../../styles/components/_button.scss';
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {register} from '../../redux/authSlice';
+// This is Signup component and uses the dispatch and redux functionalities to just signup a user
+// Utilizes a simple signup form here to do that.
 const SignUp = () => {
     const dispatch = useDispatch();
     const [state,setState] = useState({

@@ -1,0 +1,17 @@
+// Some styling used for Add Task. Mainly used this so the textbox looks nice
+.addtask {
+    width: 100%;
+    form {
+        width: 70%;
+        margin: 3rem;
+        display: flex;
+    }
+    input {
+        padding: 5px;
+        width: 30rem;
+        border: none;
+        outline: none;
+        background-color: whitesmoke;
+        border-radius: 5px;
+    }
+}

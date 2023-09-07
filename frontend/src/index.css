@@ -7,3 +7,13 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.8rem;
+}
+
+li {
+    list-style: none;
+}
+/* Put in some global styles here just to make some jsx components easy to style later */

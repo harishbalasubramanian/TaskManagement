@@ -1,0 +1,14 @@
+// Adds some simple styling to the sidebar component nothing too fancy
+.sidebar {
+    background-color: navy;
+    color: white;
+    height: 100vh;
+    padding: 1rem;
+    max-width: 15vw;
+    .list-item {
+        margin: 1rem 0;
+        
+        text-align: center;
+        background-color: #ffa631;
+    }
+}

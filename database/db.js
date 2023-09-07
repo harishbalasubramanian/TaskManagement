@@ -5,7 +5,7 @@ const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }
-
+// Sets up the MongoDB database
 mongoose
     .connect(mongoURI, options)
     .then(() => {

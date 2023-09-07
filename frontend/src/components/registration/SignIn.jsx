@@ -3,6 +3,8 @@ import '../../styles/components/_button.scss'
 import {useState} from 'react'
 import {useDispatch} from 'react-redux';
 import {signin} from '../../redux/authSlice';
+// This is the SignIn Component. It updates using redux the state of the textboxes and just contains
+// a simple sign in form. Upon submitting it will dispatch redux.
 const SignIn = () => {
     const dispatch = useDispatch();
     const [state,setState] = useState({

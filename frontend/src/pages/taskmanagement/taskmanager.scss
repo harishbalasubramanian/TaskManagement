@@ -1,0 +1,10 @@
+// Simple styling here since the components have their own individual styling
+.taskmanager {
+    width: 100%;
+    display: flex;
+    &__left {
+        width: 15%;
+
+    }
+    
+}

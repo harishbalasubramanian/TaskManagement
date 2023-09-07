@@ -1,6 +1,9 @@
+
 const User = require('../../database/model/user.model')
 const jwt = require('jsonwebtoken')
 const validator = require('email-validator');
+// Method for signing in a user
+// Just checkes to see if password is correct according to hash and then signs in
 const signin = async (req,res) => {
     let {email,password} = req.body
     try{
@@ -22,6 +25,7 @@ const signin = async (req,res) => {
                 token,
                 username:user.username,
                 email: user.email,
+                id: user._id,
                 createdAt: user.createdAt,
                 updatedAt: user.updatedAt,
 
@@ -31,7 +35,7 @@ const signin = async (req,res) => {
         return res.status(400).send('Login Failed')
     }
 };
-
+// registers a user in the data base. Sends the password to the database where the middleware then hashes it and stores
 const register = async (req,res) => {
     const {email,password,username} = req.body;
     try {

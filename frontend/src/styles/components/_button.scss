@@ -1,3 +1,5 @@
+// Since buttons were the most common component, I wanted some standardization, so I made this file. Just
+// Provides a standard layout for how we can style buttons
 .button {
     margin-left: 10px;
     padding: 10px;
@@ -6,4 +8,6 @@
     border-radius: 5px;
     min-width: 150px;
     cursor: pointer;
+    display: inline-block;
+    text-align: center;
 }

@@ -1,12 +1,17 @@
 import {createSlice} from "@reduxjs/toolkit";
 import axios from 'axios';
 import history from '../history';
+const initialUser = localStorage.getItem('auth')
+    ? JSON.parse(localStorage.getItem('auth'))
+    : null;
 const initialState = {
     isLoading: false,
-    currentUser: null,
+    currentUser: initialUser,
     error: null,
 
 };
+// Basically, this acts as the reducer for the auth state and this file
+// is resonsible for connecting the backend and the front end while managing the auth state
 export const authSlice = createSlice({
     name: 'auth',
     initialState: initialState,
@@ -34,7 +39,7 @@ export const authSlice = createSlice({
 export const {loginFailure,loginSuccess,registerFailure,registerSuccess,logoutSuccess} = authSlice.actions;
 
 export default authSlice.reducer;
-
+// This helps to register any new users
 export const register = (user) => async(dispatch) => {
     const formdata = new FormData();
     
@@ -68,7 +73,7 @@ export const register = (user) => async(dispatch) => {
     }
     
 };
-
+// This will just signin the users
 export const signin = user => async(dispatch) => {
     try {
         const response = await axios.post('http://localhost:4000/auth/signin',user)
